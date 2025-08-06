@@ -1,18 +1,21 @@
-import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemaTypes'
+import { defineConfig } from 'sanity';
+import { structureTool } from 'sanity/structure';
+import { visionTool } from '@sanity/vision';
+import { schemaTypes } from './schemaTypes/index.js';
+import dotenv from 'dotenv';
+
+dotenv.config(); 
 
 export default defineConfig({
-  name: 'default',
-  title: 'demo-sanity',
+  name: process.env.SANITY_NAME,
+  title: process.env.SANITY_TITLE,
 
-  projectId: 'xbqu5k94',
-  dataset: 'production',
+  projectId: process.env.SANITY_PROJECT_ID,
+  dataset: process.env.SANITY_DATASET,
 
   plugins: [structureTool(), visionTool()],
 
   schema: {
     types: schemaTypes,
   },
-})
+});
