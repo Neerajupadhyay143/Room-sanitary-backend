@@ -19,7 +19,7 @@ export default {
                     { title: 'Brassware', value: 'brassware' },
                     { title: 'Concealed Showers', value: 'concealed-showers' },
                     { title: 'LED Mirrors', value: 'led-mirrors' },
-                    { title: 'Waste & Accessories', value: 'accessories' },
+                    { title: 'Waste accessories', value: 'Waste-accessories' }
                 ]
             }
         },
